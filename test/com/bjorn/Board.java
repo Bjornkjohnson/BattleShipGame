@@ -6,17 +6,23 @@ import java.util.HashMap;
  * Created by bjornjohnson on 1/11/16.
  */
 public class Board {
-    private HashMap<String, String> boardState;
+    private HashMap<Integer, String> boardState;
     public Board() {
-        boardState = new HashMap<String, String>();
+        boardState = new HashMap<Integer, String>();
     }
 
-    public HashMap<String, String> getBoardState() {
+    public HashMap<Integer, String> getBoardState() {
         return boardState;
     }
 
-    public void placeShip(String startingPoint, String orientation, int shipSize) {
-        boardState.put("a1", "shipOne" );
-        boardState.put("a2", "shipOne" );
+    public void placeShip(int startingPoint, String orientation, int shipSize, String shipName) {
+        int endPoint = startingPoint + shipSize;
+        if (orientation == "horizontal"){
+            for (; startingPoint < endPoint; startingPoint++) {
+                boardState.put(startingPoint, shipName );
+            }
+        } else {
+
+        }
     }
 }

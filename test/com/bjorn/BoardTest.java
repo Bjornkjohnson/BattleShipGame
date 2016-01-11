@@ -12,12 +12,12 @@ import static org.junit.Assert.assertEquals;
  */
 public class BoardTest {
     private Board newBoard;
-    private HashMap<String, String> boardState;
+    private HashMap<Integer, String> boardState;
 
     @Before
     public void setUp() {
         newBoard = new Board();
-        boardState = new HashMap<String, String>();
+        boardState = new HashMap<Integer, String>();
     }
 
     @Test
@@ -27,9 +27,20 @@ public class BoardTest {
 
     @Test
     public void getBoardwithSingleShip() throws Exception {
-        boardState.put("a1", "shipOne" );
-        boardState.put("a2", "shipOne" );
-        newBoard.placeShip("a1", "right", 2);
+        boardState.put(0, "shipOne" );
+        boardState.put(1, "shipOne" );
+        newBoard.placeShip(0, "horizontal", 2, "shipOne");
+        assertEquals(boardState, newBoard.getBoardState());
+    }
+
+    @Test
+    public void getBoardwithTwoShips() throws Exception {
+        boardState.put(0, "shipOne" );
+        boardState.put(1, "shipOne" );
+        boardState.put(10, "shipTwo" );
+        boardState.put(11, "shipTwo" );
+        newBoard.placeShip(0, "horizontal", 2, "shipOne");
+        newBoard.placeShip(10, "horizontal", 2, "shipTwo");
         assertEquals(boardState, newBoard.getBoardState());
     }
 }
