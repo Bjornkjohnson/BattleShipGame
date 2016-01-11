@@ -55,10 +55,9 @@ public class BoardTest {
         assertEquals(boardState, newBoard.getBoardState());
     }
 
-    @Test
-    public void checkForErrorIfPiecesOverlap() throws Exception {
+    @Test(expected = IllegalArgumentException.class)
+    public void checkForErrorIfPiecesOverlap(){
         newBoard.placeShip(0, "horizontal", 2, "shipOne");
         newBoard.placeShip(0, "vertical", 2, "shipTwo");
-        assertEquals(boardState, newBoard.getBoardState());
     }
 }

@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62a49400-ae3d-4bfd-b1ee-25556d8807d2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/BattleShipGame/com/bjorn/Board.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/com/bjorn/Board.java" afterPath="$PROJECT_DIR$/src/com/bjorn/Board.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/BattleShipGame/com/bjorn/BoardTest.class" afterPath="$PROJECT_DIR$/out/test/BattleShipGame/com/bjorn/BoardTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/bjorn/ShipOverlapException.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bjorn/Board.java" afterPath="$PROJECT_DIR$/src/com/bjorn/Board.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/bjorn/BoardTest.java" afterPath="$PROJECT_DIR$/test/com/bjorn/BoardTest.java" />
     </list>
     <ignored path="BattleShipGame.iws" />
@@ -33,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/bjorn/Board.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -42,10 +40,23 @@
       <file leaf-file-name="BoardTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/bjorn/BoardTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8238748">
-              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6477495">
+              <caret line="57" column="45" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShipOverlapException.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/bjorn/ShipOverlapException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+              <folding>
+                <element signature="e#168#169#0" expanded="true" />
+                <element signature="e#198#199#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -72,6 +83,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/test/com/bjorn/Board.java" />
+        <option value="$PROJECT_DIR$/src/com/bjorn/ShipOverlapException.java" />
+        <option value="$PROJECT_DIR$/src/com/bjorn/Board.java" />
         <option value="$PROJECT_DIR$/test/com/bjorn/BoardTest.java" />
       </list>
     </option>
@@ -494,15 +507,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BoardTest - 2016.01.11 at 16h 03m 06s.xml">
-      <configuration name="BoardTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest - 2016.01.11 at 16h 03m 44s.xml">
-      <configuration name="BoardTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest - 2016.01.11 at 16h 04m 06s.xml">
-      <configuration name="BoardTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BoardTest - 2016.01.11 at 16h 04m 23s.xml">
       <configuration name="BoardTest" configurationId="JUnit" />
     </history-entry>
@@ -522,6 +526,15 @@
       <configuration name="BoardTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="BoardTest - 2016.01.11 at 16h 24m 07s.xml">
+      <configuration name="BoardTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoardTest - 2016.01.11 at 16h 38m 57s.xml">
+      <configuration name="BoardTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoardTest - 2016.01.11 at 17h 27m 32s.xml">
+      <configuration name="BoardTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoardTest - 2016.01.11 at 17h 29m 21s.xml">
       <configuration name="BoardTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -568,15 +581,26 @@
     <entry file="file://$PROJECT_DIR$/src/com/bjorn/Board.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bjorn/ShipOverlapException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding>
+            <element signature="e#168#169#0" expanded="true" />
+            <element signature="e#198#199#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/bjorn/BoardTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8238748">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6477495">
+          <caret line="57" column="45" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

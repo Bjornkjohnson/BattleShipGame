@@ -16,6 +16,9 @@ public class Board {
     }
 
     public void placeShip(int startingPoint, String orientation, int shipSize, String shipName) {
+        if (boardState.containsKey(startingPoint)) {
+            throw new IllegalArgumentException();
+        }
 
         if (orientation == "horizontal"){
             int endPoint = startingPoint + shipSize;
