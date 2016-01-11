@@ -21,12 +21,12 @@ public class BoardTest {
     }
 
     @Test
-    public void getNewBoardState() throws Exception {
+    public void getNewEmptyBoard() throws Exception {
         assertEquals(boardState, newBoard.getBoardState());
     }
 
     @Test
-    public void getBoardwithSingleShip() throws Exception {
+    public void placeOneHorizantalShip() throws Exception {
         boardState.put(0, "shipOne" );
         boardState.put(1, "shipOne" );
         newBoard.placeShip(0, "horizontal", 2, "shipOne");
@@ -34,13 +34,31 @@ public class BoardTest {
     }
 
     @Test
-    public void getBoardwithTwoShips() throws Exception {
+    public void placeTwoHorizantalShips() throws Exception {
         boardState.put(0, "shipOne" );
         boardState.put(1, "shipOne" );
         boardState.put(10, "shipTwo" );
         boardState.put(11, "shipTwo" );
         newBoard.placeShip(0, "horizontal", 2, "shipOne");
         newBoard.placeShip(10, "horizontal", 2, "shipTwo");
+        assertEquals(boardState, newBoard.getBoardState());
+    }
+
+    @Test
+    public void placeOneHorizantalOneVerticalShip() throws Exception {
+        boardState.put(0, "shipOne" );
+        boardState.put(1, "shipOne" );
+        boardState.put(10, "shipTwo" );
+        boardState.put(20, "shipTwo" );
+        newBoard.placeShip(0, "horizontal", 2, "shipOne");
+        newBoard.placeShip(10, "vertical", 2, "shipTwo");
+        assertEquals(boardState, newBoard.getBoardState());
+    }
+
+    @Test
+    public void checkForErrorIfPiecesOverlap() throws Exception {
+        newBoard.placeShip(0, "horizontal", 2, "shipOne");
+        newBoard.placeShip(0, "vertical", 2, "shipTwo");
         assertEquals(boardState, newBoard.getBoardState());
     }
 }

@@ -16,13 +16,18 @@ public class Board {
     }
 
     public void placeShip(int startingPoint, String orientation, int shipSize, String shipName) {
-        int endPoint = startingPoint + shipSize;
+
         if (orientation == "horizontal"){
+            int endPoint = startingPoint + shipSize;
             for (; startingPoint < endPoint; startingPoint++) {
                 boardState.put(startingPoint, shipName );
             }
-        } else {
-
+        }
+        if (orientation == "vertical"){
+            int endPoint = startingPoint + 10*shipSize;
+            for (; startingPoint < endPoint; startingPoint += 10) {
+                boardState.put(startingPoint, shipName );
+            }
         }
     }
 }
