@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62a49400-ae3d-4bfd-b1ee-25556d8807d2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/com/bjorn/Board.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/com/bjorn/BoardTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BattleShipGame.iml" afterPath="$PROJECT_DIR$/BattleShipGame.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/bjorn/BoardTest.java" afterPath="$PROJECT_DIR$/test/com/bjorn/BoardTest.java" />
     </list>
     <ignored path="BattleShipGame.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,12 +28,10 @@
       <file leaf-file-name="BoardTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/bjorn/BoardTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.96477497">
-              <caret line="29" column="0" selection-start-line="23" selection-start-column="8" selection-end-line="24" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.56751466">
+              <caret line="28" column="59" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#347#363#0" expanded="true" />
-                <element signature="e#598#614#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -78,8 +72,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/com/bjorn/BoardTest.java" />
         <option value="$PROJECT_DIR$/test/com/bjorn/Board.java" />
+        <option value="$PROJECT_DIR$/test/com/bjorn/BoardTest.java" />
       </list>
     </option>
   </component>
@@ -493,6 +487,15 @@
     <history-entry file="BoardTest - 2016.01.11 at 15h 12m 44s.xml">
       <configuration name="BoardTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BoardTest - 2016.01.11 at 15h 25m 03s.xml">
+      <configuration name="BoardTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoardTest - 2016.01.11 at 15h 25m 39s.xml">
+      <configuration name="BoardTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoardTest - 2016.01.11 at 15h 25m 50s.xml">
+      <configuration name="BoardTest" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="BoardTest_getBoardwithSingleShip - 2016.01.11 at 15h 10m 24s.xml">
       <configuration name="BoardTest.getBoardwithSingleShip" configurationId="JUnit" />
     </history-entry>
@@ -555,12 +558,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/bjorn/BoardTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.96477497">
-          <caret line="29" column="0" selection-start-line="23" selection-start-column="8" selection-end-line="24" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.56751466">
+          <caret line="28" column="59" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#347#363#0" expanded="true" />
-            <element signature="e#598#614#0" expanded="true" />
           </folding>
         </state>
       </provider>
