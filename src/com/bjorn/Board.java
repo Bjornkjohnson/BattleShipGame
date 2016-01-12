@@ -35,5 +35,14 @@ public class Board {
         }
     }
 
-
+    public String updateBoardState(int shotCoordinates) {
+        String status = "miss";
+        if (boardState.containsKey(shotCoordinates)){
+            status = boardState.get(shotCoordinates);
+            boardState.put(shotCoordinates, "hit");
+            return status;
+        }
+        boardState.put(shotCoordinates, "miss");
+        return status;
+    }
 }
