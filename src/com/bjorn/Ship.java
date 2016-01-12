@@ -23,7 +23,6 @@ public class Ship {
         if (hits == length) {
             sunk = true;
         }
-
     }
 
     public int getHits() {

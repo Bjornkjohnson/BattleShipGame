@@ -38,6 +38,15 @@ public class ShipTest {
     }
 
     @Test
+    public void shipShouldReturnThreeIfHitThreeTimes() throws Exception {
+        newShip = new Ship(5);
+        newShip.IncrementHits();
+        newShip.IncrementHits();
+        newShip.IncrementHits();
+        assertEquals(3, newShip.getHits());
+    }
+
+    @Test
     public void shipIsSunkIfHitsEqualLength() throws Exception {
         newShip = new Ship(2);
         newShip.IncrementHits();
