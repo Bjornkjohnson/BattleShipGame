@@ -17,7 +17,7 @@ public class BoardTest {
     @Before
     public void setUp() {
         newBoard = new Board();
-        boardState = new HashMap<Integer, String>();
+        boardState = new HashMap<>();
     }
 
     @Test

@@ -1,6 +1,7 @@
 package com.bjorn;
 
 import java.util.HashMap;
+import java.util.Objects;
 
 /**
  * Created by bjornjohnson on 1/11/16.
@@ -8,7 +9,7 @@ import java.util.HashMap;
 public class Board {
     private HashMap<Integer, String> boardState;
     public Board() {
-        boardState = new HashMap<Integer, String>();
+        boardState = new HashMap<>();
     }
 
     public HashMap<Integer, String> getBoardState() {
@@ -20,17 +21,19 @@ public class Board {
             throw new IllegalArgumentException();
         }
 
-        if (orientation == "horizontal"){
+        if (Objects.equals(orientation, "horizontal")){
             int endPoint = startingPoint + shipSize;
             for (; startingPoint < endPoint; startingPoint++) {
                 boardState.put(startingPoint, shipName );
             }
         }
-        if (orientation == "vertical"){
+        if (Objects.equals(orientation, "vertical")){
             int endPoint = startingPoint + 10*shipSize;
             for (; startingPoint < endPoint; startingPoint += 10) {
                 boardState.put(startingPoint, shipName );
             }
         }
     }
+
+
 }
