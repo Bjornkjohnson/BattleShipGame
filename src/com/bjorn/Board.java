@@ -37,12 +37,28 @@ public class Board {
 
     public String updateBoardState(int shotCoordinates) {
         String status = "miss";
-        if (boardState.containsKey(shotCoordinates)){
-            status = boardState.get(shotCoordinates);
-            boardState.put(shotCoordinates, "hit");
-            return status;
+        if (isHit(shotCoordinates)){
+            String shipName = getShipName(shotCoordinates);
+            markAsHit(shotCoordinates);
+            return shipName;
         }
-        boardState.put(shotCoordinates, "miss");
+        markAsMiss(shotCoordinates);
         return status;
+    }
+
+    private boolean isHit(int shotCoordinates) {
+        return boardState.containsKey(shotCoordinates);
+    }
+
+    private void markAsHit(int shotCoordinates) {
+        boardState.put(shotCoordinates, "hit");
+    }
+
+    private void markAsMiss(int shotCoordinates) {
+        boardState.put(shotCoordinates, "miss");
+    }
+
+    private String getShipName(int shotCoordinates) {
+        return boardState.get(shotCoordinates);
     }
 }
