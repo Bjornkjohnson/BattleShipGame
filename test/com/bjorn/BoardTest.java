@@ -61,32 +61,13 @@ public class BoardTest {
         newBoard.placeShip(0, "vertical", 2, "shipTwo");
     }
 
+
     @Test
-    public void ifShipHitShouldUpdateBoard() throws Exception {
+    public void boardShouldUpdateAfterShot() throws Exception {
         boardState.put(0, "shipOne" );
         boardState.put(1, "hit" );
         newBoard.placeShip(0, "horizontal", 2, "shipOne");
-        newBoard.updateBoardState(1);
+        newBoard.updateBoardState(1, "hit");
         assertEquals(boardState, newBoard.getBoardState());
     }
-
-    @Test
-    public void ifMissShouldUpdateBoard() throws Exception {
-        boardState.put(1, "miss" );
-        newBoard.updateBoardState(1);
-        assertEquals(boardState, newBoard.getBoardState());
-    }
-
-    @Test
-    public void ifShipHitShouldReturnShipName() throws Exception {
-        newBoard.placeShip(0, "horizontal", 2, "shipOne");
-        assertEquals("shipOne", newBoard.updateBoardState(1));
-    }
-
-    @Test
-    public void ifMissShouldReturnMiss() throws Exception {
-        assertEquals("miss", newBoard.updateBoardState(1));
-    }
-
-
 }

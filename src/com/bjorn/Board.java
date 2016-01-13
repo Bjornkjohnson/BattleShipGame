@@ -35,30 +35,8 @@ public class Board {
         }
     }
 
-    public String updateBoardState(int shotCoordinates) {
-        String status = "miss";
-        if (isHit(shotCoordinates)){
-            String shipName = getShipName(shotCoordinates);
-            markAsHit(shotCoordinates);
-            return shipName;
-        }
-        markAsMiss(shotCoordinates);
-        return status;
+    public void updateBoardState(int shotCoordinates, String updatedState) {
+        boardState.put(shotCoordinates, updatedState);
     }
 
-    private boolean isHit(int shotCoordinates) {
-        return boardState.containsKey(shotCoordinates);
-    }
-
-    private void markAsHit(int shotCoordinates) {
-        boardState.put(shotCoordinates, "hit");
-    }
-
-    private void markAsMiss(int shotCoordinates) {
-        boardState.put(shotCoordinates, "miss");
-    }
-
-    private String getShipName(int shotCoordinates) {
-        return boardState.get(shotCoordinates);
-    }
 }
