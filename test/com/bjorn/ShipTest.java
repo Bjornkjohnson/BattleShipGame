@@ -2,6 +2,7 @@ package com.bjorn;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.validator.PublicClassValidator;
 
 import static org.junit.Assert.assertEquals;
 
@@ -12,45 +13,56 @@ import static org.junit.Assert.assertEquals;
 public class ShipTest {
     private Ship newShip;
 
+    @Before
+    public void setUp() {
+        newShip = new Ship(2, 0, 0);
+    }
+
     @Test
     public void makeNewShipOfLengthTwo() throws Exception {
-        newShip = new Ship(2);
         assertEquals(2, newShip.getLength());
     }
 
     @Test
     public void makeNewShipOfLengthThree() throws Exception {
-        newShip = new Ship(3);
+        newShip = new Ship(3, 0, 0);
         assertEquals(3, newShip.getLength());
     }
 
     @Test
     public void newShipsHitsShouldBeZero() throws Exception {
-        newShip = new Ship(2);
         assertEquals(0, newShip.getHits());
     }
 
     @Test
+    public void shouldReturnTrueIfHit() throws Exception {
+        assertEquals(true, newShip.checkHit(1));
+    }
+
+    @Test
+    public void shouldReturnFalseIfHit() throws Exception {
+        assertEquals(false, newShip.checkHit(9));
+    }
+
+    @Test
     public void shipShouldReturnOneIfHitOnce() throws Exception {
-        newShip = new Ship(2);
-        newShip.IncrementHits();
+        newShip.checkHit(1);
         assertEquals(1, newShip.getHits());
     }
 
     @Test
     public void shipShouldReturnThreeIfHitThreeTimes() throws Exception {
-        newShip = new Ship(5);
-        newShip.IncrementHits();
-        newShip.IncrementHits();
-        newShip.IncrementHits();
+        newShip = new Ship(5, 0, 0);
+        newShip.checkHit(1);
+        newShip.checkHit(2);
+        newShip.checkHit(3);
         assertEquals(3, newShip.getHits());
     }
 
     @Test
     public void shipIsSunkIfHitsEqualLength() throws Exception {
-        newShip = new Ship(2);
-        newShip.IncrementHits();
-        newShip.IncrementHits();
+        newShip.checkHit(0);
+        newShip.checkHit(1);
         assertEquals(true, newShip.isSunk());
     }
 

@@ -7,18 +7,41 @@ public class Ship {
     private int length;
     private int hits;
     private boolean sunk;
+    private int position;
+    private int orientationIterator;
 
-    public Ship(int initializeLength) {
+    public Ship(int initializeLength, int startingCoordinate, int orientation) {
         length = initializeLength;
         hits = 0;
         sunk = false;
+        position = startingCoordinate;
+        setOrientationIterator(orientation);
+    }
+
+    private void setOrientationIterator(int orientation) {
+        if (orientation == 0) {
+            orientationIterator = 1;
+        } else  {
+            orientationIterator = 10;
+        }
     }
 
     public int getLength() {
         return length;
     }
 
-    public void IncrementHits() {
+
+    public boolean checkHit(int coordinate) {
+        for (int i = position; i < length; i += orientationIterator) {
+            if (i == coordinate){
+                incrementHits();
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void incrementHits() {
         hits++;
         if (hits == length) {
             sunk = true;
@@ -32,4 +55,5 @@ public class Ship {
     public boolean isSunk() {
         return sunk;
     }
+
 }
