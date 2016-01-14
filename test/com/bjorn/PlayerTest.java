@@ -25,6 +25,6 @@ public class PlayerTest {
 
     @Test
     public void newPlayerShouldHaveFiveShips() throws Exception {
-        assertEquals(5, newPlayer.getShips());
+        assertEquals(5, newPlayer.getFleet());
     }
 }

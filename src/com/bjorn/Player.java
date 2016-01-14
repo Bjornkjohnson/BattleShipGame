@@ -10,8 +10,7 @@ public class Player {
         System.arraycopy( newFleet, 0, fleet, 0, newFleet.length );
     }
 
-    public int getShips() {
-
+    public int getFleet() {
         return fleet.length;
     }
 }
