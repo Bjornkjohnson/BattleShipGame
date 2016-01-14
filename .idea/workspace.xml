@@ -62,12 +62,13 @@
           <file leaf-file-name="Player.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/bjorn/Player.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.3522505">
-                  <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+                <state vertical-scroll-proportion="0.32289627">
+                  <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
                   <folding>
-                    <element signature="e#165#166#0" expanded="true" />
-                    <element signature="e#239#240#0" expanded="true" />
-                    <element signature="e#303#304#0" expanded="true" />
+                    <element signature="e#335#336#0" expanded="true" />
+                    <element signature="e#370#371#0" expanded="true" />
+                    <element signature="e#401#402#0" expanded="true" />
+                    <element signature="e#429#430#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -106,8 +107,8 @@
           <file leaf-file-name="PlayerTest.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/test/com/bjorn/PlayerTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.7358121">
-                  <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+                <state vertical-scroll-proportion="0.8238748">
+                  <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -143,8 +144,8 @@
         <option value="$PROJECT_DIR$/src/com/bjorn/Board.java" />
         <option value="$PROJECT_DIR$/test/com/bjorn/ShipTest.java" />
         <option value="$PROJECT_DIR$/src/com/bjorn/Ship.java" />
-        <option value="$PROJECT_DIR$/test/com/bjorn/PlayerTest.java" />
         <option value="$PROJECT_DIR$/src/com/bjorn/Player.java" />
+        <option value="$PROJECT_DIR$/test/com/bjorn/PlayerTest.java" />
       </list>
     </option>
   </component>
@@ -637,8 +638,8 @@
     <history-entry file="PlayerTest - 2016.01.14 at 10h 55m 06s.xml">
       <configuration name="PlayerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShipTest - 2016.01.13 at 16h 02m 09s.xml">
-      <configuration name="ShipTest" configurationId="JUnit" />
+    <history-entry file="PlayerTest - 2016.01.14 at 11h 14m 07s.xml">
+      <configuration name="PlayerTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ShipTest - 2016.01.13 at 16h 11m 21s.xml">
       <configuration name="ShipTest" configurationId="JUnit" />
@@ -881,24 +882,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/bjorn/PlayerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/bjorn/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7358121">
-          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.32289627">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#335#336#0" expanded="true" />
+            <element signature="e#370#371#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bjorn/Player.java">
+    <entry file="file://$PROJECT_DIR$/test/com/bjorn/PlayerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3522505">
-          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.8238748">
+          <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
           <folding>
-            <element signature="e#165#166#0" expanded="true" />
-            <element signature="e#239#240#0" expanded="true" />
-            <element signature="e#303#304#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

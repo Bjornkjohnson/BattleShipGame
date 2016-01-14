@@ -9,6 +9,7 @@ import static org.junit.Assert.assertEquals;
  * Created by bjornjohnson on 1/13/16.
  */
 public class PlayerTest {
+    private Board newBoard;
     private Player newPlayer;
 
     @Before
@@ -19,12 +20,20 @@ public class PlayerTest {
         ships[2] = new Ship(3, 20, 0);
         ships[3] = new Ship(4, 30, 0);
         ships[4] = new Ship(5, 40, 0);
-
-        newPlayer = new Player(ships);
+        newBoard = new Board();
+        newPlayer = new Player(ships, newBoard);
     }
 
     @Test
     public void newPlayerShouldHaveFiveShips() throws Exception {
         assertEquals(5, newPlayer.getFleet());
     }
+
+    @Test
+    public void newPlayerShouldHaveGameBoard() throws Exception {
+
+        assertEquals(newBoard, newPlayer.getBoard());
+    }
+
+    
 }
