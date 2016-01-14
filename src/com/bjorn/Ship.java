@@ -9,6 +9,7 @@ public class Ship {
     private boolean sunk;
     private int position;
     private int orientationIterator;
+    private int endOfShip;
 
     public Ship(int initializeLength, int startingCoordinate, int orientation) {
         length = initializeLength;
@@ -16,6 +17,7 @@ public class Ship {
         sunk = false;
         position = startingCoordinate;
         setOrientationIterator(orientation);
+        endOfShip = position + length*orientationIterator;
     }
 
     private void setOrientationIterator(int orientation) {
@@ -32,7 +34,7 @@ public class Ship {
 
 
     public boolean checkHit(int coordinate) {
-        for (int i = position; i < length; i += orientationIterator) {
+        for (int i = position; i < endOfShip; i += orientationIterator) {
             if (i == coordinate){
                 incrementHits();
                 return true;

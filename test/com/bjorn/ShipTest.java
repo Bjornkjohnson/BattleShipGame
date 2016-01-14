@@ -40,7 +40,7 @@ public class ShipTest {
     }
 
     @Test
-    public void shouldReturnFalseIfHit() throws Exception {
+    public void shouldReturnFalseIfNotHit() throws Exception {
         assertEquals(false, newShip.checkHit(9));
     }
 
@@ -48,6 +48,13 @@ public class ShipTest {
     public void shipShouldReturnOneIfHitOnce() throws Exception {
         newShip.checkHit(1);
         assertEquals(1, newShip.getHits());
+    }
+
+    @Test
+    public void testLastPositionIsHitInMiddleOfBoard() throws Exception {
+        newShip = new Ship(4, 13, 0);
+        assertEquals(true, newShip.checkHit(15));
+
     }
 
     @Test

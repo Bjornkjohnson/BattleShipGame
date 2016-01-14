@@ -19,4 +19,22 @@ public class Player {
     public Board getBoard() {
         return board;
     }
+
+    public boolean checkIfHit(int coordinate) {
+        for (int i = 0; i < fleet.length; i++) {
+            if (fleet[i].checkHit(coordinate)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean fleetDestroyed() {
+        for (int i = 0; i < fleet.length; i++) {
+            if (!fleet[i].isSunk()) {
+                return false;
+            }
+        }
+        return true;
+    }
 }

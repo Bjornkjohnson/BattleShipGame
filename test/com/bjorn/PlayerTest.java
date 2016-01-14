@@ -16,10 +16,11 @@ public class PlayerTest {
     public void setUp() {
         Ship ships[] = new Ship[5];
         ships[0] = new Ship(2, 0, 0);
-        ships[1] = new Ship(3, 10, 0);
-        ships[2] = new Ship(3, 20, 0);
-        ships[3] = new Ship(4, 30, 0);
-        ships[4] = new Ship(5, 40, 0);
+        ships[1] = new Ship(3, 2, 0);
+        ships[2] = new Ship(5, 5, 0);
+        ships[3] = new Ship(3, 10, 0);
+        ships[4] = new Ship(4, 13, 0);
+
         newBoard = new Board();
         newPlayer = new Player(ships, newBoard);
     }
@@ -31,9 +32,19 @@ public class PlayerTest {
 
     @Test
     public void newPlayerShouldHaveGameBoard() throws Exception {
-
         assertEquals(newBoard, newPlayer.getBoard());
     }
 
-    
+    @Test
+    public void shouldReturnTrueIfShipIsHit() throws Exception {
+        assertEquals(true, newPlayer.checkIfHit(1));
+    }
+
+    @Test
+    public void fleetDestroyedIfallShipsSunk() throws Exception {
+        for (int i = 0; i < 17; i++) {
+            newPlayer.checkIfHit(i);
+        }
+        assertEquals(true, newPlayer.fleetDestroyed());
+    }
 }
