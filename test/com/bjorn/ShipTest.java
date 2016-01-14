@@ -58,6 +58,13 @@ public class ShipTest {
     }
 
     @Test
+    public void testLastPositionIsHitInMiddleOfBoardForVerticalShip() throws Exception {
+        newShip = new Ship(4, 13, 1);
+        assertEquals(true, newShip.checkHit(43));
+
+    }
+
+    @Test
     public void shipShouldReturnThreeIfHitThreeTimes() throws Exception {
         newShip = new Ship(5, 0, 0);
         newShip.checkHit(1);
