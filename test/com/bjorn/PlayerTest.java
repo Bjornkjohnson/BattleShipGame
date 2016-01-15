@@ -15,11 +15,11 @@ public class PlayerTest {
     @Before
     public void setUp() {
         Ship ships[] = new Ship[5];
-        ships[0] = new Ship(2, 0, 0);
-        ships[1] = new Ship(3, 2, 0);
-        ships[2] = new Ship(5, 5, 0);
-        ships[3] = new Ship(3, 10, 0);
-        ships[4] = new Ship(4, 13, 0);
+        ships[0] = new Ship(2, 0, 0, "D");
+        ships[1] = new Ship(3, 2, 0, "S");
+        ships[2] = new Ship(5, 5, 0, "A");
+        ships[3] = new Ship(3, 10, 0, "C");
+        ships[4] = new Ship(4, 13, 0, "B");
 
         newBoard = new Board();
         newPlayer = new Player(ships, newBoard);

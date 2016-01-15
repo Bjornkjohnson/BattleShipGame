@@ -15,7 +15,7 @@ public class ShipTest {
 
     @Before
     public void setUp() {
-        newShip = new Ship(2, 0, 0);
+        newShip = new Ship(2, 0, 0, "S");
     }
 
     @Test
@@ -25,7 +25,7 @@ public class ShipTest {
 
     @Test
     public void makeNewShipOfLengthThree() throws Exception {
-        newShip = new Ship(3, 0, 0);
+        newShip = new Ship(3, 0, 0, "D");
         assertEquals(3, newShip.getLength());
     }
 
@@ -52,21 +52,21 @@ public class ShipTest {
 
     @Test
     public void testLastPositionIsHitInMiddleOfBoard() throws Exception {
-        newShip = new Ship(4, 13, 0);
+        newShip = new Ship(4, 13, 0, "B");
         assertEquals(true, newShip.checkHit(15));
 
     }
 
     @Test
     public void testLastPositionIsHitInMiddleOfBoardForVerticalShip() throws Exception {
-        newShip = new Ship(4, 13, 1);
+        newShip = new Ship(4, 13, 1, "B");
         assertEquals(true, newShip.checkHit(43));
 
     }
 
     @Test
     public void shipShouldReturnThreeIfHitThreeTimes() throws Exception {
-        newShip = new Ship(5, 0, 0);
+        newShip = new Ship(5, 0, 0, "A");
         newShip.checkHit(1);
         newShip.checkHit(2);
         newShip.checkHit(3);
@@ -78,6 +78,11 @@ public class ShipTest {
         newShip.checkHit(0);
         newShip.checkHit(1);
         assertEquals(true, newShip.isSunk());
+    }
+
+    @Test
+    public void shipShouldHaveSymbol() throws Exception {
+        assertEquals("S", newShip.getSymbol());
     }
 
 

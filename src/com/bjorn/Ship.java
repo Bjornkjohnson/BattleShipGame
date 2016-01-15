@@ -10,12 +10,14 @@ public class Ship {
     private int position;
     private int orientationIterator;
     private int endOfShip;
+    private String symbol;
 
-    public Ship(int initializeLength, int startingCoordinate, int orientation) {
-        length = initializeLength;
+    public Ship(int length, int startingCoordinate, int orientation, String symbol) {
+        this.length = length;
         position = startingCoordinate;
         setOrientationIterator(orientation);
         endOfShip = position + length*orientationIterator;
+        this.symbol = symbol;
     }
 
     private void setOrientationIterator(int orientation) {
@@ -56,4 +58,7 @@ public class Ship {
         return sunk;
     }
 
+    public String getSymbol() {
+        return symbol;
+    }
 }

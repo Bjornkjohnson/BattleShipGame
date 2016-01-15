@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62a49400-ae3d-4bfd-b1ee-25556d8807d2" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/GameTest.java" afterPath="$PROJECT_DIR$/test/com/bjorn/GameTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bjorn/Ship.java" afterPath="$PROJECT_DIR$/src/com/bjorn/Ship.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/bjorn/PlayerTest.java" afterPath="$PROJECT_DIR$/test/com/bjorn/PlayerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/bjorn/ShipTest.java" afterPath="$PROJECT_DIR$/test/com/bjorn/ShipTest.java" />
     </list>
     <ignored path="BattleShipGame.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,10 +60,12 @@
             <entry file="file://$PROJECT_DIR$/src/com/bjorn/Ship.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.41095892">
-                  <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+                  <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
                   <folding>
-                    <element signature="e#1264#1265#0" expanded="true" />
-                    <element signature="e#1291#1292#0" expanded="true" />
+                    <element signature="e#1321#1322#0" expanded="true" />
+                    <element signature="e#1348#1349#0" expanded="true" />
+                    <element signature="e#1381#1382#0" expanded="true" />
+                    <element signature="e#1410#1411#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -104,11 +106,11 @@
             <entry file="file://$PROJECT_DIR$/test/com/bjorn/ShipTest.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.8238748">
-                  <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+                  <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#299#300#0" expanded="true" />
-                    <element signature="e#342#343#0" expanded="true" />
+                    <element signature="e#347#348#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -118,7 +120,7 @@
             <entry file="file://$PROJECT_DIR$/test/com/bjorn/PlayerTest.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+                  <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -163,12 +165,12 @@
         <option value="$PROJECT_DIR$/test/com/bjorn/BoardTest.java" />
         <option value="$PROJECT_DIR$/src/com/bjorn/Board.java" />
         <option value="$PROJECT_DIR$/src/com/bjorn/Player.java" />
-        <option value="$PROJECT_DIR$/test/com/bjorn/ShipTest.java" />
         <option value="$PROJECT_DIR$/test/GameTest.java" />
         <option value="$PROJECT_DIR$/test/com/bjorn/GameTest.java" />
         <option value="$PROJECT_DIR$/test/com/bjorn/AITest.java" />
-        <option value="$PROJECT_DIR$/test/com/bjorn/PlayerTest.java" />
         <option value="$PROJECT_DIR$/src/com/bjorn/Ship.java" />
+        <option value="$PROJECT_DIR$/test/com/bjorn/ShipTest.java" />
+        <option value="$PROJECT_DIR$/test/com/bjorn/PlayerTest.java" />
       </list>
     </option>
   </component>
@@ -683,9 +685,6 @@
     <history-entry file="BoardTest - 2016.01.14 at 15h 20m 42s.xml">
       <configuration name="BoardTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PlayerTest - 2016.01.14 at 14h 34m 02s.xml">
-      <configuration name="PlayerTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="PlayerTest - 2016.01.14 at 15h 21m 32s.xml">
       <configuration name="PlayerTest" configurationId="JUnit" />
     </history-entry>
@@ -701,8 +700,11 @@
     <history-entry file="ShipTest - 2016.01.15 at 12h 06m 55s.xml">
       <configuration name="ShipTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShipTest_testLastPositionIsHitInMiddleOfBoardForVerticalShip - 2016.01.14 at 14h 45m 52s.xml">
-      <configuration name="ShipTest.testLastPositionIsHitInMiddleOfBoardForVerticalShip" configurationId="JUnit" />
+    <history-entry file="ShipTest - 2016.01.15 at 13h 38m 59s.xml">
+      <configuration name="ShipTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ShipTest - 2016.01.15 at 13h 39m 11s.xml">
+      <configuration name="ShipTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ShipTest_testLastPositionIsHitInMiddleOfBoardForVerticalShip - 2016.01.14 at 15h 00m 05s.xml">
       <configuration name="ShipTest.testLastPositionIsHitInMiddleOfBoardForVerticalShip" configurationId="JUnit" />
@@ -803,8 +805,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
           <folding>
-            <element signature="e#1264#1265#0" expanded="true" />
-            <element signature="e#1291#1292#0" expanded="true" />
+            <element signature="e#1321#1322#0" expanded="true" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1381#1382#0" expanded="true" />
+            <element signature="e#1410#1411#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -826,7 +830,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#299#300#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -848,8 +852,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
           <folding>
-            <element signature="e#1264#1265#0" expanded="true" />
-            <element signature="e#1291#1292#0" expanded="true" />
+            <element signature="e#1321#1322#0" expanded="true" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1381#1382#0" expanded="true" />
+            <element signature="e#1410#1411#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -871,7 +877,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#299#300#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -927,24 +933,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/bjorn/GameTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/bjorn/PlayerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/bjorn/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -958,25 +946,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/bjorn/ShipTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/bjorn/Ship.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8238748">
-          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.41095892">
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#299#300#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#1321#1322#0" expanded="true" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1381#1382#0" expanded="true" />
+            <element signature="e#1410#1411#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bjorn/Ship.java">
+    <entry file="file://$PROJECT_DIR$/test/com/bjorn/GameTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41095892">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/bjorn/PlayerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
           <folding>
-            <element signature="e#1264#1265#0" expanded="true" />
-            <element signature="e#1291#1292#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/bjorn/ShipTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8238748">
+          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#299#300#0" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
           </folding>
         </state>
       </provider>
