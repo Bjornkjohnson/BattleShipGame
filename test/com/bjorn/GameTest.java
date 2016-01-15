@@ -1,3 +1,5 @@
+package com.bjorn;
+
 import org.junit.Test;
 
 /**

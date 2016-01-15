@@ -5,16 +5,14 @@ package com.bjorn;
  */
 public class Ship {
     private int length;
-    private int hits;
-    private boolean sunk;
+    private int hits = 0;
+    private boolean sunk = false;
     private int position;
     private int orientationIterator;
     private int endOfShip;
 
     public Ship(int initializeLength, int startingCoordinate, int orientation) {
         length = initializeLength;
-        hits = 0;
-        sunk = false;
         position = startingCoordinate;
         setOrientationIterator(orientation);
         endOfShip = position + length*orientationIterator;
