@@ -55,46 +55,6 @@
     <exclude name="**/?*.aj"/>
   </patternset>
   
-  <!-- JDK definitions -->
-  
-  <property name="jdk.bin.1.8" value="${jdk.home.1.8}/bin"/>
-  <path id="jdk.classpath.1.8">
-    <fileset dir="${jdk.home.1.8}">
-      <include name="jre/lib/charsets.jar"/>
-      <include name="jre/lib/deploy.jar"/>
-      <include name="jre/lib/ext/cldrdata.jar"/>
-      <include name="jre/lib/ext/dnsns.jar"/>
-      <include name="jre/lib/ext/jaccess.jar"/>
-      <include name="jre/lib/ext/jfxrt.jar"/>
-      <include name="jre/lib/ext/localedata.jar"/>
-      <include name="jre/lib/ext/nashorn.jar"/>
-      <include name="jre/lib/ext/sunec.jar"/>
-      <include name="jre/lib/ext/sunjce_provider.jar"/>
-      <include name="jre/lib/ext/sunpkcs11.jar"/>
-      <include name="jre/lib/ext/zipfs.jar"/>
-      <include name="jre/lib/javaws.jar"/>
-      <include name="jre/lib/jce.jar"/>
-      <include name="jre/lib/jfr.jar"/>
-      <include name="jre/lib/jfxswt.jar"/>
-      <include name="jre/lib/jsse.jar"/>
-      <include name="jre/lib/management-agent.jar"/>
-      <include name="jre/lib/plugin.jar"/>
-      <include name="jre/lib/resources.jar"/>
-      <include name="jre/lib/rt.jar"/>
-      <include name="lib/ant-javafx.jar"/>
-      <include name="lib/dt.jar"/>
-      <include name="lib/javafx-mx.jar"/>
-      <include name="lib/jconsole.jar"/>
-      <include name="lib/packager.jar"/>
-      <include name="lib/sa-jdi.jar"/>
-      <include name="lib/tools.jar"/>
-    </fileset>
-  </path>
-  
-  <property name="project.jdk.home" value="${jdk.home.1.8}"/>
-  <property name="project.jdk.bin" value="${jdk.bin.1.8}"/>
-  <property name="project.jdk.classpath" value="jdk.classpath.1.8"/>
-  
   <!-- Modules -->
   
   
@@ -103,9 +63,6 @@
   <dirname property="module.battleshipgame.basedir" file="${ant.file}"/>
   
   
-  <property name="module.jdk.home.battleshipgame" value="${project.jdk.home}"/>
-  <property name="module.jdk.bin.battleshipgame" value="${project.jdk.bin}"/>
-  <property name="module.jdk.classpath.battleshipgame" value="${project.jdk.classpath}"/>
   
   <property name="compiler.args.battleshipgame" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
   
@@ -116,16 +73,13 @@
     <!-- Paths to be included in compilation bootclasspath -->
   </path>
   
-  <path id="battleshipgame.module.production.classpath">
-    <path refid="${module.jdk.classpath.battleshipgame}"/>
-  </path>
+  <path id="battleshipgame.module.production.classpath"/>
   
   <path id="battleshipgame.runtime.production.module.classpath">
     <pathelement location="${battleshipgame.output.dir}"/>
   </path>
   
   <path id="battleshipgame.module.classpath">
-    <path refid="${module.jdk.classpath.battleshipgame}"/>
     <pathelement location="${battleshipgame.output.dir}"/>
     <pathelement location="${idea.home}/lib/hamcrest-core-1.3.jar"/>
     <pathelement location="${idea.home}/lib/junit-4.12.jar"/>
@@ -164,7 +118,7 @@
   
   <target name="compile.module.battleshipgame.production" description="Compile module BattleShipGame; production classes">
     <mkdir dir="${battleshipgame.output.dir}"/>
-    <javac destdir="${battleshipgame.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.battleshipgame}/javac">
+    <javac destdir="${battleshipgame.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true">
       <compilerarg line="${compiler.args.battleshipgame}"/>
       <bootclasspath refid="battleshipgame.module.bootclasspath"/>
       <classpath refid="battleshipgame.module.production.classpath"/>
@@ -182,7 +136,7 @@
   
   <target name="compile.module.battleshipgame.tests" depends="compile.module.battleshipgame.production" description="compile module BattleShipGame; test classes" unless="skip.tests">
     <mkdir dir="${battleshipgame.testoutput.dir}"/>
-    <javac destdir="${battleshipgame.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.battleshipgame}/javac">
+    <javac destdir="${battleshipgame.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true">
       <compilerarg line="${compiler.args.battleshipgame}"/>
       <bootclasspath refid="battleshipgame.module.bootclasspath"/>
       <classpath refid="battleshipgame.module.classpath"/>
