@@ -4,9 +4,8 @@
     <list default="true" id="62a49400-ae3d-4bfd-b1ee-25556d8807d2" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/battleshipgame.properties" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/battleshipgame.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/module_battleshipgame.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BattleShipGame.iws" />
     <ignored path=".idea/workspace.xml" />
