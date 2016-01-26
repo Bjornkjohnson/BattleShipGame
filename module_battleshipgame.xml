@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_battleshipgame" default="compile.module.battleshipgame">
+  <dirname property="module.battleshipgame.basedir" file="${ant.file.module_battleshipgame}"/>
+  
+  <property name="module.jdk.home.battleshipgame" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.battleshipgame" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.battleshipgame" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.battleshipgame" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="battleshipgame.output.dir" value="${module.battleshipgame.basedir}/out/production/BattleShipGame"/>
+  <property name="battleshipgame.testoutput.dir" value="${module.battleshipgame.basedir}/out/test/BattleShipGame"/>
+  
+  <path id="battleshipgame.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="battleshipgame.module.production.classpath">
+    <path refid="${module.jdk.classpath.battleshipgame}"/>
+  </path>
+  
+  <path id="battleshipgame.runtime.production.module.classpath">
+    <pathelement location="${battleshipgame.output.dir}"/>
+  </path>
+  
+  <path id="battleshipgame.module.classpath">
+    <path refid="${module.jdk.classpath.battleshipgame}"/>
+    <pathelement location="${battleshipgame.output.dir}"/>
+    <pathelement location="${idea.home}/lib/hamcrest-core-1.3.jar"/>
+    <pathelement location="${idea.home}/lib/junit-4.12.jar"/>
+  </path>
+  
+  <path id="battleshipgame.runtime.module.classpath">
+    <pathelement location="${battleshipgame.testoutput.dir}"/>
+    <pathelement location="${battleshipgame.output.dir}"/>
+    <pathelement location="${idea.home}/lib/hamcrest-core-1.3.jar"/>
+    <pathelement location="${idea.home}/lib/junit-4.12.jar"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.battleshipgame">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.battleshipgame">
+    <patternset refid="excluded.from.module.battleshipgame"/>
+  </patternset>
+  
+  <path id="battleshipgame.module.sourcepath">
+    <dirset dir="${module.battleshipgame.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  <path id="battleshipgame.module.test.sourcepath">
+    <dirset dir="${module.battleshipgame.basedir}">
+      <include name="test"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.battleshipgame" depends="compile.module.battleshipgame.production,compile.module.battleshipgame.tests" description="Compile module BattleShipGame"/>
+  
+  <target name="compile.module.battleshipgame.production" depends="register.custom.compilers" description="Compile module BattleShipGame; production classes">
+    <mkdir dir="${battleshipgame.output.dir}"/>
+    <javac2 destdir="${battleshipgame.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.battleshipgame}/javac">
+      <compilerarg line="${compiler.args.battleshipgame}"/>
+      <bootclasspath refid="battleshipgame.module.bootclasspath"/>
+      <classpath refid="battleshipgame.module.production.classpath"/>
+      <src refid="battleshipgame.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.battleshipgame"/>
+    </javac2>
+    
+    <copy todir="${battleshipgame.output.dir}">
+      <fileset dir="${module.battleshipgame.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.battleshipgame.tests" depends="register.custom.compilers,compile.module.battleshipgame.production" description="compile module BattleShipGame; test classes" unless="skip.tests">
+    <mkdir dir="${battleshipgame.testoutput.dir}"/>
+    <javac2 destdir="${battleshipgame.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.battleshipgame}/javac">
+      <compilerarg line="${compiler.args.battleshipgame}"/>
+      <bootclasspath refid="battleshipgame.module.bootclasspath"/>
+      <classpath refid="battleshipgame.module.classpath"/>
+      <src refid="battleshipgame.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.battleshipgame"/>
+    </javac2>
+    
+    <copy todir="${battleshipgame.testoutput.dir}">
+      <fileset dir="${module.battleshipgame.basedir}/test">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.battleshipgame" description="cleanup module">
+    <delete dir="${battleshipgame.output.dir}"/>
+    <delete dir="${battleshipgame.testoutput.dir}"/>
+  </target>
+</project>
