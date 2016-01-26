@@ -16,7 +16,7 @@
   <property name="compiler.max.memory" value="700m"/>
   <patternset id="ignored.files">
     <exclude name="**/*.hprof/**"/>
-    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyc/**"/>git s
     <exclude name="**/*.pyo/**"/>
     <exclude name="**/*.rbc/**"/>
     <exclude name="**/*~/**"/>
