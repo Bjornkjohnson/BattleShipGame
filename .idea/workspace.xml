@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62a49400-ae3d-4bfd-b1ee-25556d8807d2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/battleshipgame.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/battleshipgame.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/module_battleshipgame.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.properties" afterPath="$PROJECT_DIR$/build.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
     </list>
     <ignored path="BattleShipGame.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -283,7 +281,6 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$USER_HOME$/dev" />
-    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="build" />
     <property name="GenerateAntBuildDialog.generateSingleFile" value="true" />
