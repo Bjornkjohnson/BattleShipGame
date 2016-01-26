@@ -6,3 +6,4 @@ BattleShip
 
 [license]: https://img.shields.io/badge/License-MIT-brightgreen.png
 [travis]: https://travis-ci.org/Bjornkjohnson/BattleShipGame
+[build-status]: https://travis-ci.org/Bjornkjohnson/BattleShipGame.png?branch=master
